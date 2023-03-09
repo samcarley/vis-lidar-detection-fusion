@@ -1,15 +1,51 @@
-<h1>New project template</h1>
-<p>This directory contains an example of a CodeChat Editor project. To create a
-    new project using this template:</p>
-<ol>
-    <li>Copy this file and <a href="toc.cchtml">toc.cchtml</a> to a
-        newly-created directory of your choice.</li>
-    <li>Browse to the directory you just created using the CodeChat Editor's
-        web-based file browser.</li>
-    <li>Open this file and start editing. (If you don't want a readme file, you
-        may delete it; only&nbsp;<a href="toc.cchtml">toc.cchtml</a>&nbsp; is
-        required for a CodeChat Editor project.) You may add any source files
-        you like in this directory or in any subdirectory. When you add or
-        delete a file, update the <a href="toc.cchtml">table of contents</a> to
-        make navigation easier.</li>
-</ol>
+<h1>Visual and LiDAR Detection Fusion Framework Project</h1>
+<p class="MsoNormal">Created by Samantha Carley - sc1748</p>
+<h2 class="MsoNormal"><strong>Introduction and Motivation</strong></h2>
+<p class="MsoNormal">Part of my current research at the work involves the
+    utilization of object detection algorithms. <em>Object detection</em> is a
+    computer vision technique that identifies objects in a scene. Object
+    detection utilizes machine learning in order to detect and classify
+    objects.</p>
+<p class="MsoNormal">Object detection can be implemented in different types of
+    sensing modalities, such as visual (RGB, a regular camera), thermal (IR)
+    spectrum, LiDAR (Light Detection and Ranging), and radar. Each of these
+    sensing modalities tell a different story about a scene; a regular RGB
+    image shows natural, colorful detail while LiDAR records depth. Combining
+    information from each sensing modality can be very beneficial for
+    technologies like self-driving vehicles (and is being implemented today in
+    Tesla&rsquo;s self-driving vehicles).</p>
+<p class="MsoNormal">Additionally, there are many different types of object
+    detection and classification algorithms (YOLO, RCNN, etc.) that can differ
+    in performance depending upon their architecture and training protocols.
+    Network performance can differ either in the general accuracy of the
+    network or in the network&rsquo;s performance on individual classes. For
+    example, maybe a trained YOLOv4 network performs better on the car class,
+    and the trained RCNN network performs better on the pedestrian class. If we
+    were to implement either of these networks, we would be missing out on the
+    potential gain we would have in one of the network&rsquo;s not-so-confident
+    classes. So, why not implement both networks, and pit them against each
+    other to determine the most confident classification for a detected object?
+    Combine this with the implementation of object detection in other
+    co-aligned sensing modalities, and we are coming close to achieving a
+    highly context-aware framework.</p>
+<p class="MsoNormal">In this framework, networks&rsquo; results are combined
+    via a process called <em>fusion</em>. Fusion is just that&mdash;the
+    combination of information&mdash;but rules are applied. We define a fusion
+    metric; in this case, it is a network&rsquo;s fitness, or confidence in its
+    prediction. We then compare the fitness from network <em>X</em> and network
+    <em>Y</em> depending upon a chosen fusion function. The function can be as
+    simple as whichever fitness is higher to as complex as a Choquet Integral.
+    For now, complex fusion functions are beyond the scope of this work.</p>
+<h2 class="MsoNormal"><strong>Approach</strong></h2>
+<p class="MsoNormal">My goal with this project is to demonstrate the effects of
+    combining multiple object detection algorithms in the visual sensing
+    modality (RGB images/video) and the LiDAR sensing modality (point clouds)
+    to create a context-aware detection framework. To be clear, the RGB images
+    will be co-aligned with the LiDAR point clouds; if the dataset does not
+    come pre co-aligned, a depth perception algorithm will be implemented
+    within the 2D image in order to co-align the LiDAR point cloud. The object
+    detection methods will be pretrained, as the details of training these
+    methods are not necessary to demonstrate the effectiveness of fusion.</p>
+<p class="MsoNormal">The dataset is to be determined but will be publically
+    available.</p>
+<p class="MsoNormal">&nbsp;</p>
