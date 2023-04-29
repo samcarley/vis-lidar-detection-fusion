@@ -137,6 +137,10 @@
         width="970" height="381"></p>
 <h3 class="MsoNormal">I/O Adapting Functions</h3>
 <p>TODO</p>
+<p>bbox overlap</p>
+<p>transformation btween lidar and visual</p>
+<p>results table</p>
+<p>can start to code and just document while doing it</p>
 <h3>Fusion Methods</h3>
 <p><strong>Mean Confidence -&nbsp;</strong>Taking the average of all confidence
     (or objectness) scores for a given detection. Can cause issues if
@@ -167,5 +171,6 @@
     better than others in "painting the whole picture".&nbsp;</p>
 <p>We will evaluate using 10 diverse images, and showcase the performance of
     all methods on those images in order to compare them.</p>
+<p>Table will produce</p>
 <p class="MsoNormal">&nbsp;</p>
 <p class="MsoNormal">&nbsp;</p>
